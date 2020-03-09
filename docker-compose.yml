@@ -1,0 +1,31 @@
+version: '3'
+services:
+
+  tweet_collector:
+    build: tweet_collector/
+    container_name: 'tweet_collector'
+    links:
+    - mongodb
+
+  mongodb:
+    container_name: 'mongodb'
+    image: mongo
+    ports:
+    - 27017:27017
+
+  etl_job:
+    container_name: 'etl_job'
+    build: etl_job
+    links:
+      - mongodb
+      - postgresdb
+
+  postgresdb:
+    container_name: 'postgresdb'
+    image: postgres
+    environment:
+      - POSTGRES_USER=xxxx
+      - POSTGRES_PASSWORD=xxxx
+      - POSTGRES_DB=xxxx
+    ports:
+    - 3892:5432
