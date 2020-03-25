@@ -1,7 +1,6 @@
+'''Twitter API credentials'''
 
-# Insert here your twitter API credentials
-
-CONSUMER_API_KEY = 'xxxx'
-CONSUMER_API_SECRET = 'xxxx'
+CONSUMER_API_KEY = 'xxxxxx'
+CONSUMER_API_SECRET = 'xxxxx'
 ACCESS_TOKEN = 'xxxxxx'
-ACCESS_TOKEN_SECRET = 'xxxxx'
+ACCESS_TOKEN_SECRET = 'xxxxxx'
